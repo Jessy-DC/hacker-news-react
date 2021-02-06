@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import {getTopStoriesID} from "../api/api.news";
+import {NewsContainer} from "./NewsContainer";
 
 function NewsList() {
     const [storiesID, setStoriesID] = useState([])
@@ -12,14 +13,21 @@ function NewsList() {
                 return index < 10
             })
 
-            setStoriesID(stories);
+            setStoriesID(filteredStories);
         }
 
         getStories();
     }, [storiesID])
 
     return (
-        <h3>Mes news</h3>
+        <div>
+            <h6>Top 10 news</h6>
+            <div>
+                { storiesID && storiesID.map((id, index) => {
+                    return <NewsContainer storyID={id} />
+                })}
+            </div>
+        </div>
     )
 }
 
