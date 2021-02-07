@@ -1,7 +1,7 @@
 import './App.css';
 import {NewsList} from './components/NewsList'
 import {Header} from "./components/Header";
-import {BrowserRouter as NavLink, Link, Router, Route, Switch} from "react-router-dom";
+import {Router, Route, Switch} from "react-router-dom";
 import {createBrowserHistory} from 'history'
 import {Welcome} from "./components/Welcome";
 
@@ -12,11 +12,11 @@ function App() {
       <Router history={history}>
         <div className="App">
             <Header />
+            <Switch>
+                <Route exact path='/' component={NewsList} />
+                <Route path='/welcome' component={Welcome} />
+            </Switch>
         </div>
-        <Switch>
-           <Route exact path='/' component={NewsList} />
-           <Route path='/welcome' component={Welcome} />
-        </Switch>
       </Router>
   );
 }

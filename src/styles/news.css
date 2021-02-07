@@ -8,6 +8,7 @@
     background-color: orangered;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .news .content:hover {
