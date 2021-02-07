@@ -12,20 +12,21 @@ export function NewsContainer({storyID}) {
             setStory(storyResult);
         }
         getStory(storyID)
-    })
+    }, [storyID])
 
     if(story == null) {
         return <p>No data found</p>
     }
 
-    const {title, time, url} = story;
+    const {title, time, url, score} = story;
 
     return (
-        <div className="news">
+        <div className="news" key={storyID}>
             <NewsStory
             title={title}
             time={time}
             url={url}
+            score={score}
             />
         </div>
     )

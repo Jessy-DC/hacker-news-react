@@ -25,7 +25,11 @@ function NewsList() {
             <h3>Last news</h3>
             <div className="newsList">
                 { storiesID && storiesID.map((id, index) => {
-                    return <NewsContainer storyID={id} />
+                    return (
+                            <div key={id}>
+                                <NewsContainer storyID={id} />
+                            </div>
+                        )
                 })}
             </div>
         </div>

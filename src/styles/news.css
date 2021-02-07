@@ -7,12 +7,12 @@
 .header-bar {
     background-color: orangered;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .news .content:hover {
     color: #F56;
-    border: 3px solid #d22b2b
+    border: 1px solid #d22b2b
 }
 
 a {
