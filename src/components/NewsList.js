@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import {getTopStoriesID} from "../api/api.news";
 import {NewsContainer} from "./NewsContainer";
+import '../styles/news.css'
 
 function NewsList() {
     const [storiesID, setStoriesID] = useState([])
@@ -10,7 +11,7 @@ function NewsList() {
             const stories = await getTopStoriesID();
 
             const filteredStories = stories.filter((id, index) => {
-                return index < 10
+                return index < 9
             })
 
             setStoriesID(filteredStories);
@@ -21,8 +22,8 @@ function NewsList() {
 
     return (
         <div>
-            <h6>Top 10 news</h6>
-            <div>
+            <h3>Last news</h3>
+            <div className="newsList">
                 { storiesID && storiesID.map((id, index) => {
                     return <NewsContainer storyID={id} />
                 })}

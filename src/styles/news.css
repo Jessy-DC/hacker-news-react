@@ -1,0 +1,23 @@
+.newsList {
+    display: grid;
+    grid-template: 50% 50%/ 1fr 1fr 1fr;
+    grid-gap: 40px;
+}
+
+.header-bar {
+    background-color: orangered;
+    display: flex;
+    justify-content: space-around;
+}
+
+.news .content:hover {
+    color: #F56;
+    border: 3px solid #d22b2b
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+

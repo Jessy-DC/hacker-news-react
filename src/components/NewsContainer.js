@@ -9,7 +9,6 @@ export function NewsContainer({storyID}) {
     useEffect(() => {
         async function getStory(id) {
             const storyResult = await getStoryFromID(id)
-            console.log(storyResult)
             setStory(storyResult);
         }
         getStory(storyID)
@@ -22,7 +21,7 @@ export function NewsContainer({storyID}) {
     const {title, time, url} = story;
 
     return (
-        <div>
+        <div className="news">
             <NewsStory
             title={title}
             time={time}
