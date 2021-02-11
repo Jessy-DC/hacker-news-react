@@ -8,6 +8,7 @@ export function Header() {
         <nav>
             <header className="header-bar">
                 <h3>Hacker news React</h3>
+                <h3 className="navbar-item-left">Navbar Item</h3>
                 <h3>
                     <a target="_blank" href="https://news.ycombinator.com">Original website</a>
                 </h3>

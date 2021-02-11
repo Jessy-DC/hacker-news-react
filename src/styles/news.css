@@ -11,6 +11,11 @@
     align-items: center;
 }
 
+.navbar-item-left {
+    margin-right: auto;
+    margin-left: 20px;
+}
+
 .news .content:hover {
     color: #F56;
     border: 1px solid #d22b2b
