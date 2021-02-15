@@ -12,12 +12,16 @@
     font-family: Avenir-Heavy, sans-serif;
 }
 
+.header-bar h3:hover, a:hover{
+    color: #F56;
+}
+
 .navbar-item-left {
     margin-right: auto;
     margin-left: 20px;
 }
 
-.news .content:hover {
+.news:hover {
     color: #F56;
     border: 1px solid #FAFAFA;
 }
