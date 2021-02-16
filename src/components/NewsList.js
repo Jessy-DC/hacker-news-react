@@ -26,7 +26,7 @@ function NewsList() {
             <div className="newsList">
                 { storiesID && storiesID.map((id, index) => {
                     return (
-                            <div key={id}>
+                            <div className="news-details" key={id}>
                                 <NewsContainer storyID={id} />
                             </div>
                         )

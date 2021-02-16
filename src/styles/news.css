@@ -1,6 +1,6 @@
 .newsList {
     display: grid;
-    grid-template: 50% 50%/ 1fr 1fr 1fr;
+    grid-template: repeat(3, 33%)/ 1fr 1fr 1fr;
     grid-gap: 40px;
 }
 
@@ -12,8 +12,20 @@
     font-family: Avenir-Heavy, sans-serif;
 }
 
-.header-bar h3:hover, a:hover{
+.header-bar h3:hover{
     color: #F56;
+}
+
+.header-bar a:hover {
+    color: #F56;
+}
+
+.title-news {
+    height: 5em;
+}
+
+.news-details {
+    border: 1px solid #FAFAFA;
 }
 
 .navbar-item-left {
@@ -21,9 +33,17 @@
     margin-left: 20px;
 }
 
-.news:hover {
-    color: #F56;
-    border: 1px solid #FAFAFA;
+.button-read-div {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button-read-div a {
+    background: linear-gradient(rgb(48, 50, 62), rgb(30, 31, 42)) 0% 0% / cover;
+    border-radius: 10%;
+    width: 7em;
+    height: 3.6em;
+    margin-right: 3px;
 }
 
 a {

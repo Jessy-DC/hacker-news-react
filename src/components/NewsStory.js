@@ -11,10 +11,13 @@ export function NewsStory({
     const date = new Date(time * 1000)
     return (
         <div className="content">
-            <a target="_blank" href={url}><h5>{title}</h5></a>
+            <a target="_blank" rel="noreferrer" href={url}><h5 className="title-news">{title}</h5></a>
             <div>
                 <span>{date.toDateString()}</span>
                 <p>Score : {score} {score > 1 ? 'points' : 'point' }</p>
+            </div>
+            <div className="button-read-div" >
+                <a className="button-read-link" target="_blank" rel="noreferrer" href={url}><h5>Read</h5></a>
             </div>
         </div>
     )
